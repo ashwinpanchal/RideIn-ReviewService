@@ -23,7 +23,7 @@ public class ReviewService implements CommandLineRunner {
                 .content("Great Quality")
                 .rating(3.5)
                 .build(); // plane java object
-//        reviewRepository.save(r); // this code executes sql query
+        reviewRepository.save(r); // this code executes sql query
         List<Review> reviewList = reviewRepository.findAll();
         for(Review review : reviewList){
             System.out.println(review.toString());
